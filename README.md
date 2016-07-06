@@ -14,7 +14,7 @@
   1. [Arrow Functions](#arrow-functions)
   1. [Classes & Constructors](#classes--constructors)
   1. [Modules](#modules)
-  1. [Iterators and Generators](#iterators-and-generators)
+  1. [Generators](#generators)
   1. [Properties](#properties)
   1. [Variables](#variables)
   1. [Hoisting](#hoisting)
@@ -2519,7 +2519,7 @@
 1. [Rest](#es6-rest)
 1. [Array Spreads](#es6-array-spreads)
 1. [Let and Const](#references)
-1. [Generators](#iterators-and-generators)
+1. [Generators](#generators)
 1. [Modules](#modules)
 
 **[⬆ back to top](#table-of-contents)**
