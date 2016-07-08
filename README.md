@@ -798,25 +798,6 @@
     }));
     ```
 
-  <a name="arrows--paren-wrap"></a><a name="8.3"></a>
-  - [8.3](#arrows--paren-wrap) In case the expression spans over multiple lines, wrap it in parentheses for better readability.
-
-    > Why? It shows clearly where the function starts and ends.
-
-    ```js
-    // bad
-    [1, 2, 3].map(number => 'As time went by, the string containing the ' +
-      `${number} became much longer. So we needed to break it over multiple ` +
-      'lines.'
-    );
-
-    // good
-    [1, 2, 3].map(number => (
-      `As time went by, the string containing the ${number} became much ` +
-      'longer. So we needed to break it over multiple lines.'
-    ));
-    ```
-
   <a name="arrows--confusing"></a><a name="8.5"></a>
   - [8.5](#arrows--confusing) Avoid confusing arrow function syntax (`=>`) with comparison operators (`<=`, `>=`). eslint: [`no-confusing-arrow`](http://eslint.org/docs/rules/no-confusing-arrow)
 
@@ -2399,33 +2380,6 @@
 
   <a name="accessors--not-required"></a><a name="23.1"></a>
   - [23.1](#accessors--not-required) Accessor functions for properties are not required.
-
-  <a name="accessors--no-getters-setters"></a><a name="23.2"></a>
-  - [23.2](#accessors--no-getters-setters) Do not use JavaScript getters/setters as they cause unexpected side effects and are harder to test, maintain, and reason about. Instead, if you do make accessor functions, use getVal() and setVal('hello').
-
-    ```javascript
-    // bad
-    class Dragon {
-      get age() {
-        // ...
-      }
-
-      set age(value) {
-        // ...
-      }
-    }
-
-    // good
-    class Dragon {
-      getAge() {
-        // ...
-      }
-
-      setAge(value) {
-        // ...
-      }
-    }
-    ```
 
   <a name="accessors--boolean-prefix"></a><a name="23.3"></a>
   - [23.3](#accessors--boolean-prefix) If the property/method is a `boolean`, use `isVal()` or `hasVal()`.
