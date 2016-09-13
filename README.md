@@ -2448,6 +2448,21 @@
     });
     ```
 
+  <a name="events--handlers"></a><a name="24.2"></a>
+  - [24.2](#events--handlers) A named function or method whose sole purpose is to act as event handler should include the event in its name and be prefixed with 'on', so that its usage can be immediately discerned.
+
+  ```javascript
+  // good
+  function onSaveClick(event) {
+    ...
+  }
+
+  // bad
+  function save(event) {
+    ...
+  }
+  ```
+
   **[⬆ back to top](#table-of-contents)**
 
 ## ECMAScript 5 Compatibility
