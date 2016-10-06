@@ -1108,19 +1108,19 @@
     ```
 
   <a name="modules--exports-last"></a>
-    - [10.8](#modules--exports-last) Put all `exports`s after non-export statements.
+  - [10.8](#modules--exports-last) Put all `exports`s after non-export statements.
 
-      ```javascript
-      // bad
-      export default function foo() { ... }
-      function bar() { ... }
+    ```javascript
+    // bad
+    export default function foo() { ... }
+    function bar() { ... }
 
-      // good
-      function foo() { ... }
-      function bar() { ... }
+    // good
+    function foo() { ... }
+    function bar() { ... }
 
-      export default foo;
-      ```
+    export default foo;
+    ```
 
 **[⬆ back to top](#table-of-contents)**
 
