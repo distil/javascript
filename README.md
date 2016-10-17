@@ -2315,7 +2315,7 @@
     ```
 
   <a name="naming--filename-matches-export"></a><a name="22.6"></a>
-  - [22.6](#naming--filename-matches-export) A base filename should exactly match the name of its default export.
+  - [22.6](#naming--filename-matches-export) A base filename should be the train-case equivalent of the name of its default export.
 
     ```javascript
     // file 1 contents
@@ -2330,28 +2330,24 @@
     // file 3 contents
     export default function insideDirectory() {}
 
-    // in some other file
     // bad
-    import CheckBox from './checkBox'; // PascalCase import/export, camelCase filename
-    import FortyTwo from './FortyTwo'; // PascalCase import/filename, camelCase export
-    import InsideDirectory from './InsideDirectory'; // PascalCase import/filename, camelCase export
-
-    // bad
-    import CheckBox from './check_box'; // PascalCase import/export, snake_case filename
+    import CheckBox from './CheckBox'; // PascalCase import/export, PascalCase filename
     import forty_two from './forty_two'; // snake_case import/filename, camelCase export
     import inside_directory from './inside_directory'; // snake_case import, camelCase export
     import index from './inside_directory/index'; // requiring the index file explicitly
     import insideDirectory from './insideDirectory/index'; // requiring the index file explicitly
 
+    // in some other file
     // good
-    import CheckBox from './CheckBox'; // PascalCase export/import/filename
-    import fortyTwo from './fortyTwo'; // camelCase export/import/filename
-    import insideDirectory from './insideDirectory'; // camelCase export/import/directory name/implicit "index"
-    // ^ supports both insideDirectory.js and insideDirectory/index.js
+    import CheckBox from './check-box'; // PascalCase import/export, train-case filename
+    import FortyTwo from './fort-two'; // PascalCase import/filename, train-case export
+    import InsideDirectory from './inside-directory'; // PascalCase import/filename, train-case export
+    import insideDirectory from './inside-directory'; // camelCase export/import/directory name/implicit "index"
+    // ^ supports both inside-directory.js and inside-directory/index.js
     ```
 
   <a name="naming--camelCase-default-export"></a><a name="22.7"></a>
-  - [22.7](#naming--camelCase-default-export) Use camelCase when you export-default a function. Your filename should be identical to your function's name.
+  - [22.7](#naming--camelCase-default-export) Use camelCase when you export-default a function. Your filename should be the train-case equivalent of your function's name.
 
     ```javascript
     function makeStyleGuide() {
